@@ -1,7 +1,14 @@
 import React from 'react';
 
-const App = () =>{
-    return <div> Formula One </div>
+import WorldChampionsList from './components/worldChampionsList/WorldChampionsList'
+
+const App = () => {
+    return (
+        <>
+            <div> Formula One </div>
+            <WorldChampionsList />
+        </>
+    )
 }
 
 export default App;
