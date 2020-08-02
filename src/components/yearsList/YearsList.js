@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+
 class returnYears extends React.Component {
     renderYears() {
         let arr = [];
@@ -10,9 +12,9 @@ class returnYears extends React.Component {
         return arr.map(year => {
             return (
                 <div className="yearList" key={year}>
-                    <p>
+                    <Link to={`winners/${year}`} className='yearListItem'>
                         {year}
-                    </p>
+                    </Link>
                 </div>
             )
         })
