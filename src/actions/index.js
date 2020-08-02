@@ -5,3 +5,4 @@ export const fetchChamps = () => async dispatch => {
 
     dispatch({ type: 'FETCH_CHAMPS', payload: response.data })
 }
+
