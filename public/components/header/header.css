@@ -1,0 +1,10 @@
+.headerButton {
+  font-size: 25px;
+  color: black;
+  align-self: flex-end;
+  padding: 0.85714286em 1.14285714em;
+}
+.headerButton:hover {
+  color: #c9c9c9;
+  -webkit-transform: scale(1.2);
+}

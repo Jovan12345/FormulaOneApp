@@ -11,11 +11,15 @@ class returnYears extends React.Component {
 
         return arr.map(year => {
             return (
-                <div className="yearList" key={year}>
+                <>
                     <Link to={`winners/${year}`} className='yearListItem'>
-                        {year}
-                    </Link>
-                </div>
+                        <div className="yearList" key={year}>
+
+                            {year}
+
+                        </div>
+                    </Link >
+                </>
             )
         })
     };
