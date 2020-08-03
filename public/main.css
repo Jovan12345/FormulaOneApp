@@ -31,12 +31,16 @@
 .allYearsList .yearList:hover .yearListItem {
   color: white;
 }
+.yearlyWinnersList {
+  width: 100%;
+}
 .yearlyWinnersListComponent {
   display: inline-block;
+  width: 50%;
 }
 .descrption p {
   display: inline-block;
-  width: 160px;
+  width: 180px;
   margin-bottom: 0;
 }
 .descrption p a {
@@ -54,7 +58,7 @@
 .driver {
   font-size: 22px;
   display: inline;
-  margin-right: 105px;
+  margin-right: 125px;
 }
 .yearlyWinnerCaption {
   margin-bottom: 25px;
@@ -86,12 +90,11 @@
   margin-right: 55px;
 }
 .trackWinnersComponent {
-  display: inline-block;
-  height: 100%;
+  float: right;
+  width: 50%;
 }
 .trackWinners {
-  text-align: center;
-  color: red;
+  color: snow;
 }
 .mainContainer {
   width: 65%;

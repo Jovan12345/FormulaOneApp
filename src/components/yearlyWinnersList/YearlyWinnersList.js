@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { fetchWinners, fetchChamp } from '../../actions/index';
+import { fetchWinners, fetchChamp, trackWinners } from '../../actions/index';
 import TrackWinners from '../trackWinners/TrackWinners'
 
 class YearlyWinnersList extends React.Component {
@@ -10,6 +10,9 @@ class YearlyWinnersList extends React.Component {
         this.props.fetchWinners(year);
         this.props.fetchChamp(year);
 
+    }
+    myfunction(season, round) {
+        this.props.trackWinners(season, round);
     }
 
     renderList() {
@@ -23,7 +26,7 @@ class YearlyWinnersList extends React.Component {
                 <div className="item" key={wc.season + wc.round.toString()}>
                     <div className="content">
                         <div className="descrption">
-                            <p className='yearListItem'>{wc.raceName}</p>
+                            <p className='yearListItem' onClick={() => this.myfunction(wc.season, wc.round)}>{wc.raceName}</p>
                             <p data-champion={champion} className="yearlyWinner"><a href={wc.Results[0].Driver.url} target="_blank" rel='noopener noreferrer'>{wc.Results[0].Driver.givenName} {wc.Results[0].Driver.familyName}</a></p>
                         </div>
                     </div>
@@ -36,9 +39,8 @@ class YearlyWinnersList extends React.Component {
         if (this.props.yearlyreducer.MRData && this.props.champreducer.MRData) {
             const champDetails = this.props.champreducer.MRData.StandingsTable.StandingsLists[0].DriverStandings[0];
             const season = this.props.yearlyreducer.MRData.RaceTable.season;
-            console.log(champDetails)
             return (
-                <div>
+                <div className="yearlyWinnersList">
                     <div className="yearlyWinnersListComponent">
                         <h3 className="yearlyWinnerCaption">Season {season} winners</h3>
                         <p className="track">Track</p>
@@ -59,8 +61,12 @@ class YearlyWinnersList extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-    return { yearlyreducer: state.yearlyreducer, champreducer: state.champreducer }
+    return ({
+        yearlyreducer: state.yearlyreducer,
+        champreducer: state.champreducer,
+        trackreducer: state.trackreducer
+    })
 }
 
-export default connect(mapStateToProps, { fetchWinners, fetchChamp })(YearlyWinnersList);
+export default connect(mapStateToProps, { fetchWinners, fetchChamp, trackWinners })(YearlyWinnersList);
 

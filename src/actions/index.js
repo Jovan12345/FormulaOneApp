@@ -17,3 +17,9 @@ export const fetchWinners = (year) => async dispatch => {
 
     dispatch({ type: 'FETCH_WINNERS', payload: response.data })
 }
+
+export const trackWinners = (year, round) => async dispatch => {
+    const response = await ergast.get(`/${year}/${round}/results.json`)
+
+    dispatch({type: 'FETCH_TRACK_WINNERS', payload: response.data})
+}
