@@ -12,11 +12,15 @@
   .allYearsList{
       display: grid;
       grid-template-columns: auto auto auto auto auto;
-      .yearListItem{
-        color: black;
+      .yearList{
+        .yearListItem{
+            color: black;
+        }
         &:hover{
             background: #fa9ce285;
-            color: white;
+            .yearListItem{
+                color: white;
+            }
           } 
       }
   } 

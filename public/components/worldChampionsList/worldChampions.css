@@ -1,0 +1,22 @@
+.seasonYear {
+  display: inline-block;
+  font-size: larger;
+  margin-right: 88px;
+  margin-bottom: 0;
+}
+.champName {
+  display: inline-block;
+}
+.champName a {
+  color: black;
+}
+.champName a:hover {
+  color: darkred;
+  font-weight: bolder;
+}
+.season,
+.winner {
+  font-size: 22px;
+  display: inline;
+  margin-right: 55px;
+}

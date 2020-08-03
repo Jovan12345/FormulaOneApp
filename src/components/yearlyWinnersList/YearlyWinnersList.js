@@ -22,7 +22,7 @@ class YearlyWinnersList extends React.Component {
                 <div className="item" key={wc.season + wc.round.toString()}>
                     <div className="content">
                         <div className="descrption">
-                            <p>{wc.raceName}</p>
+                            <p className='yearListItem'>{wc.raceName}</p>
                             <p data-champion={champion} className="yearlyWinner"><a href={wc.Results[0].Driver.url} target="_blank" rel='noopener noreferrer'>{wc.Results[0].Driver.givenName} {wc.Results[0].Driver.familyName}</a></p>
                         </div>
                     </div>
@@ -32,17 +32,19 @@ class YearlyWinnersList extends React.Component {
     }
 
     render() {
-        console.log(this.props)
         if (this.props.yearlyreducer.MRData && this.props.champreducer.MRData) {
             return (
-                <>
-                    <div> Yearly winners list</div>
-                    <div> {this.renderList()}</div>
-                </>
+                <div>
+                    <h3 className="yearlyWinnerCaption">Season {this.props.yearlyreducer.MRData.RaceTable.season} winners</h3>
+                    <p className="track">Track</p>
+                    <p className="driver">Driver</p>
+                    <div className="ui relaxed defided list">{this.renderList()}</div>
+                    <p>The highlited driver was also champion in the same season with a total of {this.props.champreducer.MRData.StandingsTable.StandingsLists[0].DriverStandings[0].wins} wins</p>
+                </div>
             )
         }
         return (
-            <div>Loading</div>
+            <div>Loading yearly winners...</div>
         )
     }
 }
