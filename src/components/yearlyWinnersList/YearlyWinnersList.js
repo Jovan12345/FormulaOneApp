@@ -34,14 +34,17 @@ class YearlyWinnersList extends React.Component {
 
     render() {
         if (this.props.yearlyreducer.MRData && this.props.champreducer.MRData) {
+            const champDetails = this.props.champreducer.MRData.StandingsTable.StandingsLists[0].DriverStandings[0];
+            const season = this.props.yearlyreducer.MRData.RaceTable.season;
+            console.log(champDetails)
             return (
                 <div>
                     <div className="yearlyWinnersListComponent">
-                        <h3 className="yearlyWinnerCaption">Season {this.props.yearlyreducer.MRData.RaceTable.season} winners</h3>
+                        <h3 className="yearlyWinnerCaption">Season {season} winners</h3>
                         <p className="track">Track</p>
                         <p className="driver">Driver</p>
                         <div className="ui relaxed defided list">{this.renderList()}</div>
-                        <p>The highlited driver was also champion in the same season with a total of {this.props.champreducer.MRData.StandingsTable.StandingsLists[0].DriverStandings[0].wins} wins</p>
+                        <p className="champNote">{champDetails.Driver.givenName} {champDetails.Driver.familyName} was champion in {season} season with a total of {champDetails.wins} wins</p>
                     </div>
                     <div className="trackWinnersComponent">
                         <TrackWinners />

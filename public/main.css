@@ -15,7 +15,8 @@
   font-size: 20px;
   font-weight: bolder;
   padding: 30px 0;
-  margin: 0;
+  margin: 0 auto;
+  width: 80%;
 }
 .allYearsList {
   display: grid;
@@ -25,7 +26,7 @@
   color: black;
 }
 .allYearsList .yearList:hover {
-  background: #fa9ce285;
+  background: #693434c4;
 }
 .allYearsList .yearList:hover .yearListItem {
   color: white;
@@ -35,7 +36,8 @@
 }
 .descrption p {
   display: inline-block;
-  width: 150px;
+  width: 160px;
+  margin-bottom: 0;
 }
 .descrption p a {
   text-decoration: none;
@@ -52,10 +54,14 @@
 .driver {
   font-size: 22px;
   display: inline;
-  margin-right: 97px;
+  margin-right: 105px;
 }
 .yearlyWinnerCaption {
   margin-bottom: 25px;
+}
+.champNote {
+  margin-top: 20px;
+  font-weight: bolder;
 }
 .seasonYear {
   display: inline-block;
@@ -89,7 +95,10 @@
 }
 .mainContainer {
   width: 65%;
-  background-color: #f5adad34;
+  background-color: #a15151e1;
   margin: 0 auto;
   padding: 30px;
+}
+body {
+  background-image: url("./Formula-1-F1-supercar.jpg");
 }
