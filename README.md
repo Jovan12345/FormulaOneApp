@@ -20,7 +20,7 @@ This file is created to lay out the steps for installation and starting the app 
 **For development purposes to run the LESS-CSS watcher:**
 1. Open new CLI (command line interface)
 2. Navigate to the project folder './fone' in this case
-3. run ##less-watch-compiler src public
+3. run `less-watch-compiler src public`
 
 ## App description
 
