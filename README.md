@@ -17,6 +17,11 @@ This file is created to lay out the steps for installation and starting the app 
  4. run `npm start`
  5. The app runs in development mode, can be access through browser on http://localhost:3000
 
+**For development purposes to run the LESS-CSS watcher:**
+1. Open new CLI (command line interface)
+2. Navigate to the project folder './fone' in this case
+3. run ##less-watch-compiler src public
+
 ## App description
 
  - This is an application built using React and Redux. It's purpose is to serve information related to Formula One from the ergast API WEB Service.
