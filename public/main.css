@@ -12,7 +12,6 @@
   text-decoration: none;
   text-align: center;
   height: 80px;
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
   font-weight: bolder;
   padding: 30px 0;
@@ -30,6 +29,9 @@
 }
 .allYearsList .yearList:hover .yearListItem {
   color: white;
+}
+.yearlyWinnersListComponent {
+  display: inline-block;
 }
 .descrption p {
   display: inline-block;
@@ -76,6 +78,14 @@
   font-size: 22px;
   display: inline;
   margin-right: 55px;
+}
+.trackWinnersComponent {
+  display: inline-block;
+  height: 100%;
+}
+.trackWinners {
+  text-align: center;
+  color: red;
 }
 .mainContainer {
   width: 65%;

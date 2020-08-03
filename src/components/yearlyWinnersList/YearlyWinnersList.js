@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import { fetchWinners, fetchChamp } from '../../actions/index';
+import TrackWinners from '../trackWinners/TrackWinners'
 
 class YearlyWinnersList extends React.Component {
     componentDidMount() {
@@ -35,11 +36,16 @@ class YearlyWinnersList extends React.Component {
         if (this.props.yearlyreducer.MRData && this.props.champreducer.MRData) {
             return (
                 <div>
-                    <h3 className="yearlyWinnerCaption">Season {this.props.yearlyreducer.MRData.RaceTable.season} winners</h3>
-                    <p className="track">Track</p>
-                    <p className="driver">Driver</p>
-                    <div className="ui relaxed defided list">{this.renderList()}</div>
-                    <p>The highlited driver was also champion in the same season with a total of {this.props.champreducer.MRData.StandingsTable.StandingsLists[0].DriverStandings[0].wins} wins</p>
+                    <div className="yearlyWinnersListComponent">
+                        <h3 className="yearlyWinnerCaption">Season {this.props.yearlyreducer.MRData.RaceTable.season} winners</h3>
+                        <p className="track">Track</p>
+                        <p className="driver">Driver</p>
+                        <div className="ui relaxed defided list">{this.renderList()}</div>
+                        <p>The highlited driver was also champion in the same season with a total of {this.props.champreducer.MRData.StandingsTable.StandingsLists[0].DriverStandings[0].wins} wins</p>
+                    </div>
+                    <div className="trackWinnersComponent">
+                        <TrackWinners />
+                    </div>
                 </div>
             )
         }
