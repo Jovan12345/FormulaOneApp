@@ -43,22 +43,26 @@
   display: inline-block;
   width: 180px;
   margin-bottom: 0;
+  font-size: 15px;
 }
 #descrption p a {
   text-decoration: none;
   color: black;
 }
-#descrption p a:hover {
-  color: darkred;
-  font-weight: bolder;
-}
 #descrption p:hover {
-  color: darkred;
-  font-weight: bolder;
+  color: turquoise;
+  font-weight: 900;
   cursor: pointer;
 }
+#descrption p:hover a {
+  color: turquoise;
+  font-weight: bolder;
+}
 #descrption [data-champion=true] {
-  background: rgba(139, 50, 50, 0.335);
+  background: rgba(255, 208, 0, 0.521);
+}
+#descrption [data-champion=true]:hover a {
+  color: whitesmoke;
 }
 .track,
 .driver {
@@ -74,20 +78,29 @@
   margin-top: 20px;
   font-weight: bolder;
 }
+.worldChampsList {
+  width: 100%;
+  overflow: auto;
+}
+.worldChampionsComponent {
+  display: inline-block;
+  width: 50%;
+}
 .seasonYear {
   display: inline-block;
-  font-size: larger;
+  font-size: 15px;
   margin-right: 88px;
   margin-bottom: 0;
 }
 .champName {
   display: inline-block;
+  font-size: 15px;
 }
 .champName a {
   color: black;
 }
 .champName a:hover {
-  color: darkred;
+  color: turquoise;
   font-weight: bolder;
 }
 .season,
@@ -118,10 +131,22 @@
   display: inline-block;
   width: 160px;
   margin-bottom: 0;
+  font-size: 15px;
+}
+.trackWinnerDetails p a {
+  color: black;
+}
+.trackWinnerDetails p a:hover {
+  color: turquoise;
+  font-weight: 900;
+}
+.champImgComponent {
+  float: right;
+  width: 50%;
 }
 .mainContainer {
   width: 65%;
-  background-color: #a15151e1;
+  background-color: #a15b5bf3;
   margin: 0 auto;
   padding: 30px;
 }

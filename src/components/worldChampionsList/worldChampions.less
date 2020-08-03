@@ -1,16 +1,27 @@
+.worldChampsList{
+  width: 100%;
+  overflow: auto;
+}
+
+.worldChampionsComponent{
+  display: inline-block;
+  width: 50%;
+}
+
 .seasonYear{
     display: inline-block;
-    font-size: larger;
+    font-size: @listItemFontSize;
     margin-right: 88px;
     margin-bottom: 0;
   }
   
   .champName{
     display: inline-block;
+    font-size: @listItemFontSize;
     a{
       color: black;
       &:hover{
-        color: darkred;
+        color: @hoverColor;
         font-weight: bolder;
       }
     }

@@ -13,22 +13,28 @@
       display: inline-block;
       width: 180px;
       margin-bottom: 0;
+      font-size: @listItemFontSize;
       a{
         text-decoration: none;
         color: black;
-        &:hover{
-          color: darkred;
-          font-weight: bolder;
-        }
       }
       &:hover{
-        color: darkred;
-        font-weight: bolder;
+        color: @hoverColor;
+        font-weight: 900;
         cursor: pointer;
+        a{
+            color: @hoverColor;
+            font-weight: bolder;
+        }
       }
     }
     [data-champion=true]{
-      background: rgba(139, 50, 50, 0.335);
+      background: rgba(255, 208, 0, 0.521);
+      &:hover{
+        a{
+        color: whitesmoke;
+        }
+      }
     }
   }
   
