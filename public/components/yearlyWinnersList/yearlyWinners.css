@@ -1,27 +1,172 @@
+.headerButton {
+  font-size: 25px;
+  color: black;
+  align-self: flex-end;
+  padding: 0 10px 20px 10px;
+}
+.headerButton:hover {
+  color: #c9c9c9;
+  -webkit-transform: scale(1.2);
+}
+.yearList {
+  text-decoration: none;
+  text-align: center;
+  height: 80px;
+  font-size: 20px;
+  font-weight: bolder;
+  padding: 30px 0;
+  margin: 0 auto;
+  width: 80%;
+}
+.allYearsList {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+}
+.allYearsList .yearList .yearListItem {
+  color: black;
+}
+.allYearsList .yearList:hover {
+  background: #693434c4;
+}
+.allYearsList .yearList:hover .yearListItem {
+  color: white;
+}
+.worldChampionsList {
+  width: 30%;
+  margin: 20px auto;
+}
+.seasonYear {
+  display: inline-block;
+  font-size: 15px;
+  width: 50%;
+  margin-bottom: 0;
+  text-align: center;
+}
+.champName {
+  display: inline-block;
+  font-size: 15px;
+}
+.champName a {
+  color: black;
+}
+.champName a:hover {
+  color: turquoise;
+  font-weight: bolder;
+}
+.season,
+.winner {
+  font-size: 22px;
+  display: inline-block;
+  width: 50%;
+}
+.season {
+  text-align: center;
+}
+.trackWinnersComponent {
+  float: right;
+  width: 50%;
+}
+.trackWinners {
+  color: snow;
+}
+.trackWinnersCaption {
+  margin-bottom: 25px;
+}
+.position,
+.driver,
+.constructor {
+  font-size: 20px;
+  min-width: 15%;
+  display: inline-block;
+  margin-right: 0;
+  width: 30%;
+}
+.trackWinnerDetails p {
+  display: inline-block;
+  width: 30%;
+  margin-bottom: 0;
+  font-size: 15px;
+}
+.trackWinnerDetails p a {
+  color: black;
+}
+.trackWinnerDetails p a:hover {
+  color: turquoise;
+  font-weight: 900;
+}
+@media screen and (max-width: 900px) {
+  .position,
+  .driver,
+  .constructor {
+    font-size: 17px;
+  }
+}
+.mainContainer {
+  width: 65%;
+  background-color: #a15b5bf3;
+  margin: 0 auto;
+  padding: 30px;
+  transition: linear 1s;
+}
+body {
+  background-image: url("./Formula-1-F1-supercar.jpg");
+}
+@media screen and (max-width: 900px) {
+  .mainContainer {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+.yearlyWinnersList {
+  width: 100%;
+  overflow: auto;
+}
 .yearlyWinnersListComponent {
   display: inline-block;
+  width: 50%;
 }
-.descrption p {
+#descrption p {
   display: inline-block;
-  width: 150px;
+  width: 40%;
+  margin-bottom: 0;
+  font-size: 15px;
 }
-.descrption p a {
+#descrption p a {
   text-decoration: none;
   color: black;
 }
-.descrption p a:hover {
-  color: darkred;
+#descrption p:hover {
+  color: turquoise;
+  font-weight: 900;
+  cursor: pointer;
+}
+#descrption p:hover a {
+  color: turquoise;
   font-weight: bolder;
 }
-.descrption [data-champion=true] {
-  background: rgba(139, 50, 50, 0.335);
+#descrption [data-champion=true] {
+  background: rgba(255, 208, 0, 0.521);
+}
+#descrption [data-champion=true]:hover a {
+  color: whitesmoke;
 }
 .track,
-.driver {
-  font-size: 22px;
-  display: inline;
-  margin-right: 97px;
+.driver1 {
+  font-size: 20px;
+  display: inline-block;
+  margin-right: 0;
+  width: 40%;
 }
 .yearlyWinnerCaption {
   margin-bottom: 25px;
+}
+.champNote {
+  margin-top: 20px;
+  font-weight: bolder;
+}
+@media screen and (max-width: 900px) {
+  .track,
+  .driver1 {
+    font-size: 17px;
+  }
 }

@@ -3,11 +3,12 @@ import { connect } from 'react-redux'
 
 import { trackWinners } from '../../actions'
 
+// this component is fully rendered only when the user select a track in certain season
 class TrackWinners extends React.Component {
     
+    // creates a list from all the drivers in the selected track 
     renderList() {
         const root = this.props.trackreducer.MRData.RaceTable;
-        console.log(root.Races[0].Results[0])
         return root.Races[0].Results.map(wc => {
             return (
                 <div className="item trackWinnerDetails" key={wc.number}>

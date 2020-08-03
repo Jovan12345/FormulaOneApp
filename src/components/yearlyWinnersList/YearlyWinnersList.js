@@ -10,6 +10,7 @@ class YearlyWinnersList extends React.Component {
         this.props.fetchWinners(year);
         this.props.fetchChamp(year);
 
+        // On URL change --> clear the state
         this.props.history.listen(() => {
             this.getTrackWinners();
         })
@@ -18,9 +19,11 @@ class YearlyWinnersList extends React.Component {
         this.props.trackWinners(season, round);
     }
 
+    // creates list from all the Winner Drivers in the selected Season
     renderList() {
         const champCode = this.props.champreducer.MRData.StandingsTable.StandingsLists[0].DriverStandings[0].Driver.code;
         return this.props.yearlyreducer.MRData.RaceTable.Races.map(wc => {
+            // this part is used to determine the Champion Driver in the selected Season
             let champion = false;
             if (champCode === wc.Results[0].Driver.code) {
                 champion = true;
@@ -47,7 +50,7 @@ class YearlyWinnersList extends React.Component {
                     <div className="yearlyWinnersListComponent">
                         <h3 className="yearlyWinnerCaption">Season {season} winners</h3>
                         <p className="track">Track</p>
-                        <p className="driver">Driver</p>
+                        <p className="driver1">Driver</p>
                         <div className="ui relaxed defided list">{this.renderList()}</div>
                         <p className="champNote">{champDetails.Driver.givenName} {champDetails.Driver.familyName} was champion in {season} season with a total of {champDetails.wins} wins</p>
                     </div>

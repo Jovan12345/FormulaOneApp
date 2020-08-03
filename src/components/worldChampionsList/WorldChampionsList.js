@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import { fetchChamps } from '../../actions';
-import ChampImg from '../champImg/ChampImg'
 
 
 class WorldChampionsList extends React.Component {
@@ -27,15 +26,10 @@ class WorldChampionsList extends React.Component {
     render() {
         if (this.props.wcreducer.MRData) {
             return (
-                <div className="worldChampsList">
-                    <div className="worldChampionsComponent">
-                        <p className="season">Season</p>
-                        <p className="winner">Champion</p>
-                        <div className="ui relaxed defided list">{this.renderList()}</div>
-                    </div>
-                    <div className="champImgComponent">
-                        <ChampImg />
-                    </div>
+                <div className="worldChampionsList">
+                    <p className="season">Season</p>
+                    <p className="winner">Champion</p>
+                    <div className="ui relaxed defided list">{this.renderList()}</div>
                 </div>
             )
         }

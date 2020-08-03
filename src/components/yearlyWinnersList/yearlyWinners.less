@@ -1,3 +1,4 @@
+@import '../../main.less';
 .yearlyWinnersList{
   width: 100%;
   overflow: auto;
@@ -11,7 +12,7 @@
 #descrption{
     p{
       display: inline-block;
-      width: 180px;
+      width: 40%;
       margin-bottom: 0;
       font-size: @listItemFontSize;
       a{
@@ -38,11 +39,11 @@
     }
   }
   
-.track, .driver{
-  font-size: 22px;
+.track, .driver1{
+  font-size: 20px;
   display: inline-block;
   margin-right: 0;
-  width: 180px;
+  width: 40%;
 }
 
 .yearlyWinnerCaption{
@@ -52,4 +53,11 @@
 .champNote{
   margin-top: 20px;
   font-weight: bolder;
+}
+
+
+@media screen and (max-width: 900px) {
+  .track, .driver1{
+    font-size: 17px;
+  }
 }

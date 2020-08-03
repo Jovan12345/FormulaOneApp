@@ -1,3 +1,4 @@
+@import '../../main.less';
 .trackWinnersComponent{
     float: right;
     width: 50%;
@@ -12,16 +13,17 @@
 }
 
 .position, .driver, .constructor{
-    font-size: 22px;
+    font-size: 20px;
+    min-width: 15%;
     display: inline-block;
     margin-right: 0;
-    width: 160px;
+    width: 30%;
   }
 
   .trackWinnerDetails{
     p{
         display: inline-block;
-        width: 160px;
+        width: 30%;
         margin-bottom: 0;
         font-size: @listItemFontSize;
         a{
@@ -33,3 +35,9 @@
         }
     }
   }
+
+@media screen and (max-width: 900px) {
+    .position, .driver, .constructor{
+        font-size: 17px;
+    }
+}

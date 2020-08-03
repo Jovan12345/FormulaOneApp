@@ -41,7 +41,7 @@
 }
 #descrption p {
   display: inline-block;
-  width: 180px;
+  width: 40%;
   margin-bottom: 0;
   font-size: 15px;
 }
@@ -65,11 +65,11 @@
   color: whitesmoke;
 }
 .track,
-.driver {
-  font-size: 22px;
+.driver1 {
+  font-size: 20px;
   display: inline-block;
   margin-right: 0;
-  width: 180px;
+  width: 40%;
 }
 .yearlyWinnerCaption {
   margin-bottom: 25px;
@@ -78,19 +78,22 @@
   margin-top: 20px;
   font-weight: bolder;
 }
-.worldChampsList {
-  width: 100%;
-  overflow: auto;
+@media screen and (max-width: 900px) {
+  .track,
+  .driver1 {
+    font-size: 17px;
+  }
 }
-.worldChampionsComponent {
-  display: inline-block;
-  width: 50%;
+.worldChampionsList {
+  width: 30%;
+  margin: 20px auto;
 }
 .seasonYear {
   display: inline-block;
   font-size: 15px;
-  margin-right: 88px;
+  width: 50%;
   margin-bottom: 0;
+  text-align: center;
 }
 .champName {
   display: inline-block;
@@ -106,8 +109,11 @@
 .season,
 .winner {
   font-size: 22px;
-  display: inline;
-  margin-right: 55px;
+  display: inline-block;
+  width: 50%;
+}
+.season {
+  text-align: center;
 }
 .trackWinnersComponent {
   float: right;
@@ -122,14 +128,15 @@
 .position,
 .driver,
 .constructor {
-  font-size: 22px;
+  font-size: 20px;
+  min-width: 15%;
   display: inline-block;
   margin-right: 0;
-  width: 160px;
+  width: 30%;
 }
 .trackWinnerDetails p {
   display: inline-block;
-  width: 160px;
+  width: 30%;
   margin-bottom: 0;
   font-size: 15px;
 }
@@ -140,16 +147,26 @@
   color: turquoise;
   font-weight: 900;
 }
-.champImgComponent {
-  float: right;
-  width: 50%;
+@media screen and (max-width: 900px) {
+  .position,
+  .driver,
+  .constructor {
+    font-size: 17px;
+  }
 }
 .mainContainer {
   width: 65%;
   background-color: #a15b5bf3;
   margin: 0 auto;
   padding: 30px;
+  transition: linear 1s;
 }
 body {
   background-image: url("./Formula-1-F1-supercar.jpg");
+}
+@media screen and (max-width: 900px) {
+  .mainContainer {
+    width: 90%;
+    margin: 0 auto;
+  }
 }

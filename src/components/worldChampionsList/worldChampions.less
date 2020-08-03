@@ -1,34 +1,35 @@
-.worldChampsList{
-  width: 100%;
-  overflow: auto;
+@import '../../main.less';
+.worldChampionsList{
+  width: 30%;
+  margin: 20px auto;
 }
 
-.worldChampionsComponent{
+.seasonYear{
+  display: inline-block;
+  font-size: @listItemFontSize;
+  width: 50%;
+  margin-bottom: 0;
+  text-align: center;
+}
+  
+.champName{
+  display: inline-block;
+  font-size: @listItemFontSize;
+  a{
+    color: black;
+    &:hover{
+      color: @hoverColor;
+      font-weight: bolder;
+    }
+  }
+}
+
+.season, .winner{
+  font-size: 22px;
   display: inline-block;
   width: 50%;
 }
 
-.seasonYear{
-    display: inline-block;
-    font-size: @listItemFontSize;
-    margin-right: 88px;
-    margin-bottom: 0;
-  }
-  
-  .champName{
-    display: inline-block;
-    font-size: @listItemFontSize;
-    a{
-      color: black;
-      &:hover{
-        color: @hoverColor;
-        font-weight: bolder;
-      }
-    }
-  }
-  
-  .season, .winner{
-    font-size: 22px;
-    display: inline;
-    margin-right: 55px;
-  }
+.season{
+  text-align: center;
+}

@@ -7,17 +7,23 @@
 @import './components/yearlyWinnersList/yearlyWinners.less';
 @import './components/worldChampionsList/worldChampions.less';
 @import './components/trackWinners/trackWinners.less';
-@import './components/champImg/champImg.less';
 
-
+      
 .mainContainer{
     width: 65%;
     background-color: @color;
     margin: 0 auto;
     padding: 30px;
+    transition:linear 1s;
   } 
 
 body{
-  // background-image: linear-gradient(to bottom, red,orange,yellow,green,blue,indigo,violet);
   background-image: url("./Formula-1-F1-supercar.jpg");
+}
+
+@media screen and (max-width: 900px) {
+  .mainContainer{
+    width: 90%;
+    margin: 0 auto;
+  }
 }

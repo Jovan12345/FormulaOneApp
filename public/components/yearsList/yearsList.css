@@ -5,7 +5,8 @@
   font-size: 20px;
   font-weight: bolder;
   padding: 30px 0;
-  margin: 0;
+  margin: 0 auto;
+  width: 80%;
 }
 .allYearsList {
   display: grid;
@@ -15,7 +16,7 @@
   color: black;
 }
 .allYearsList .yearList:hover {
-  background: #fa9ce285;
+  background: #693434c4;
 }
 .allYearsList .yearList:hover .yearListItem {
   color: white;
