@@ -10,8 +10,11 @@ class YearlyWinnersList extends React.Component {
         this.props.fetchWinners(year);
         this.props.fetchChamp(year);
 
+        this.props.history.listen(() => {
+            this.getTrackWinners();
+        })
     }
-    myfunction(season, round) {
+    getTrackWinners(season, round) {
         this.props.trackWinners(season, round);
     }
 
@@ -25,8 +28,8 @@ class YearlyWinnersList extends React.Component {
             return (
                 <div className="item" key={wc.season + wc.round.toString()}>
                     <div className="content">
-                        <div className="descrption">
-                            <p className='yearListItem' onClick={() => this.myfunction(wc.season, wc.round)}>{wc.raceName}</p>
+                        <div className="descrption" id="descrption">
+                            <p className='yearListItem' onClick={() => this.getTrackWinners(wc.season, wc.round)}>{wc.raceName}</p>
                             <p data-champion={champion} className="yearlyWinner"><a href={wc.Results[0].Driver.url} target="_blank" rel='noopener noreferrer'>{wc.Results[0].Driver.givenName} {wc.Results[0].Driver.familyName}</a></p>
                         </div>
                     </div>
@@ -49,7 +52,7 @@ class YearlyWinnersList extends React.Component {
                         <p className="champNote">{champDetails.Driver.givenName} {champDetails.Driver.familyName} was champion in {season} season with a total of {champDetails.wins} wins</p>
                     </div>
                     <div className="trackWinnersComponent">
-                        <TrackWinners />
+                        <TrackWinners className="trackWinner"/>
                     </div>
                 </div>
             )

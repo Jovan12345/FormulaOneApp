@@ -1,5 +1,6 @@
 .yearlyWinnersList{
   width: 100%;
+  overflow: auto;
 }
 
 .yearlyWinnersListComponent{
@@ -7,7 +8,7 @@
   width: 50%;
 }
 
-.descrption{
+#descrption{
     p{
       display: inline-block;
       width: 180px;
@@ -20,23 +21,29 @@
           font-weight: bolder;
         }
       }
+      &:hover{
+        color: darkred;
+        font-weight: bolder;
+        cursor: pointer;
+      }
     }
     [data-champion=true]{
       background: rgba(139, 50, 50, 0.335);
     }
   }
   
-  .track, .driver{
-    font-size: 22px;
-    display: inline;
-    margin-right: 125px;
-  }
-  
-  .yearlyWinnerCaption{
-    margin-bottom: 25px;
-  }
+.track, .driver{
+  font-size: 22px;
+  display: inline-block;
+  margin-right: 0;
+  width: 180px;
+}
 
-  .champNote{
-    margin-top: 20px;
-    font-weight: bolder;
-  }
+.yearlyWinnerCaption{
+  margin-bottom: 25px;
+}
+
+.champNote{
+  margin-top: 20px;
+  font-weight: bolder;
+}

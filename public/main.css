@@ -33,32 +33,39 @@
 }
 .yearlyWinnersList {
   width: 100%;
+  overflow: auto;
 }
 .yearlyWinnersListComponent {
   display: inline-block;
   width: 50%;
 }
-.descrption p {
+#descrption p {
   display: inline-block;
   width: 180px;
   margin-bottom: 0;
 }
-.descrption p a {
+#descrption p a {
   text-decoration: none;
   color: black;
 }
-.descrption p a:hover {
+#descrption p a:hover {
   color: darkred;
   font-weight: bolder;
 }
-.descrption [data-champion=true] {
+#descrption p:hover {
+  color: darkred;
+  font-weight: bolder;
+  cursor: pointer;
+}
+#descrption [data-champion=true] {
   background: rgba(139, 50, 50, 0.335);
 }
 .track,
 .driver {
   font-size: 22px;
-  display: inline;
-  margin-right: 125px;
+  display: inline-block;
+  margin-right: 0;
+  width: 180px;
 }
 .yearlyWinnerCaption {
   margin-bottom: 25px;
@@ -95,6 +102,22 @@
 }
 .trackWinners {
   color: snow;
+}
+.trackWinnersCaption {
+  margin-bottom: 25px;
+}
+.position,
+.driver,
+.constructor {
+  font-size: 22px;
+  display: inline-block;
+  margin-right: 0;
+  width: 160px;
+}
+.trackWinnerDetails p {
+  display: inline-block;
+  width: 160px;
+  margin-bottom: 0;
 }
 .mainContainer {
   width: 65%;
