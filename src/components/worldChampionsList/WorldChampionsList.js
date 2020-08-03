@@ -1,9 +1,12 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { fetchChamps } from '../../actions'
 
-class WorldChampionsList extends React.Component{
-    componentDidMount(){
+import { fetchChamps } from '../../actions';
+import ChampImg from '../champImg/ChampImg'
+
+
+class WorldChampionsList extends React.Component {
+    componentDidMount() {
         this.props.fetchChamps();
     }
     renderList() {
@@ -24,20 +27,25 @@ class WorldChampionsList extends React.Component{
     render() {
         if (this.props.wcreducer.MRData) {
             return (
-                <>
-                    <p className="season">Season</p>
-                    <p className="winner">Champion</p>
-                    <div className="ui relaxed defided list">{this.renderList()}</div>
-                </>
+                <div className="worldChampsList">
+                    <div className="worldChampionsComponent">
+                        <p className="season">Season</p>
+                        <p className="winner">Champion</p>
+                        <div className="ui relaxed defided list">{this.renderList()}</div>
+                    </div>
+                    <div className="champImgComponent">
+                        <ChampImg />
+                    </div>
+                </div>
             )
         }
         return <div className="ui relaxed defided list">Loading...</div>
     }
 }
 
-const mapStateToProps= (state) => {
+const mapStateToProps = (state) => {
     return { wcreducer: state.wcreducer }
 }
 
 
-export default connect(mapStateToProps, {fetchChamps})(WorldChampionsList);
+export default connect(mapStateToProps, { fetchChamps })(WorldChampionsList);
